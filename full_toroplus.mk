@@ -27,14 +27,6 @@ PRODUCT_PACKAGES := \
 # Get the long list of APNs
 # PRODUCT_COPY_FILES += device/samsung/toroplus/test-apns-conf_sprint.xml:system/etc/apns-conf.xml
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := toroplus
-PRODUCT_NAME := full_toroplus
-PRODUCT_BRAND := Google
-PRODUCT_MODEL := Galaxy Nexus
-PRODUCT_MANUFACTURER := Samsung
-PRODUCT_RESTRICT_VENDOR_FILES := false
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # This is where we'd set a backup provider if we had one
@@ -42,9 +34,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from toroplus device
 $(call inherit-product, device/samsung/toroplus/device.mk)
 
-# Set those variables here to overwrite the inherited values.
-#PRODUCT_NAME := full_toroplus
-#PRODUCT_DEVICE := toroplus
-#PRODUCT_BRAND := Android
-#PRODUCT_MODEL := Full AOSP on Toroplus
-#PRODUCT_RESTRICT_VENDOR_FILES := true
+## Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := toroplus
+PRODUCT_NAME := full_toroplus
+PRODUCT_BRAND := Google
+PRODUCT_MODEL := Galaxy Nexus
+PRODUCT_MANUFACTURER := Samsung
+PRODUCT_RESTRICT_VENDOR_FILES := false
