@@ -14,5 +14,4 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_toroplus.mk
+add_lunch_combo full_toroplus-userdebug
